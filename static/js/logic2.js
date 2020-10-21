@@ -1,5 +1,5 @@
 // Store our API endpoint inside queryUrl
-var queryUrl = "https://raw.githubusercontent.com/spearjen/project2/main/smallSst.json";
+var queryUrl = "https://raw.githubusercontent.com/spearjen/project2/main/Resources/smallSst.json";
 
 // Get JSON data
 d3.json(queryUrl, function(sstData) {
@@ -8,7 +8,7 @@ d3.json(queryUrl, function(sstData) {
     // createFeatures(sstData.features);
     i=0;
     // define data
-    var year = sstData.data[i][0];
+    // var year = sstData.data[i][0];
     var latRangeLeft = sstData.data[i][1].left;
     var latRangeRight = sstData.data[i][1].right;
     var latMid = sstData.data[i][1].mid;
