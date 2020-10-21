@@ -3,7 +3,7 @@ from flask_restful import Resource, Api, reqparse
 from google.cloud import bigquery
 
 import os
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "Desktop/Proj2-HurricaneClimateChange/HurricaneClimateChange-0569b60f4efb.json"
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "Hurricane -32cb24436d46.json"
 
 app = Flask(__name__)
 api = Api(app)
