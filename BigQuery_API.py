@@ -1,8 +1,8 @@
 #import necessary libraries
 from flask import Flask
 from flask_restful import Resource, Api, reqparse
-from google.cloud import bigquery
-
+from google.cloud import bigqueryfrom flask import flask
+from flask_cors import CORS
 import os
 <<<<<<< HEAD
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "Hurricane -32cb24436d46.json"
@@ -12,32 +12,35 @@ os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "Hurricane -32cb24436d46.json"
 #google credentials
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "Desktop/project2/HurricaneClimateChange-0569b60f4efb.json"
 
-# #create Flass app instance
-# app = Flask(__name__)
+#create Flass app instance
+app = Flask(__name__)
 # api = Api(app)
+cors=CORS(app)
 
 
-#setup connection to BigAssQuery
-client = bigquery.Client()
 
 
-# @app.route("/")
-# def index():
+# #setup connection to BigAssQuery
+# client = bigquery.Client()
 
-query = """
-    SELECT year, latitude, longitude, avg(sea_surface_temp) as avgSST
-    FROM `bigquery-public-data.noaa_icoads.icoads_core_*` 
-    WHERE year >=1851 
-    AND latitude <=50
-    AND latitude >=0
-    # AND longitude <=-50
-    # AND longitude >=-100
-    GROUP BY year, latitude, longitude
-    ORDER BY year
-    LIMIT 5
-"""
 
-query_res = client.query(query)  # Make an API request.
+@app.route("/")
+def index():
+
+# query = """
+#     SELECT year, latitude, longitude, avg(sea_surface_temp) as avgSST
+#     FROM `bigquery-public-data.noaa_icoads.icoads_core_*` 
+#     WHERE year >=1851 
+#     AND latitude <=50
+#     AND latitude >=0
+#     # AND longitude <=-50
+#     # AND longitude >=-100
+#     GROUP BY year, latitude, longitude
+#     ORDER BY year
+#     LIMIT 5
+# """
+
+# query_res = client.query(query)  # Make an API request.
 
 # # argument parsing
 # parser = reqparse.RequestParser()
@@ -74,9 +77,9 @@ query_res = client.query(query)  # Make an API request.
 #         return{'res': results}
 
 
-# to print in the console
-for row in query_res:
-    print(f'{row.year}, {row.latitude}, {row.longitude}, {row.avgSST}')
+# # to print in the console
+# for row in query_res:
+#     print(f'{row.year}, {row.latitude}, {row.longitude}, {row.avgSST}')
 
 # api.add_resource(PrintUserCount, '/')
 
