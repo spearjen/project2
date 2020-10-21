@@ -4,6 +4,10 @@ from flask_restful import Resource, Api, reqparse
 from google.cloud import bigqueryfrom flask import flask
 from flask_cors import CORS
 import os
+<<<<<<< HEAD
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "Hurricane -32cb24436d46.json"
+=======
+>>>>>>> 740b98cca29f3f3f9001735479266831af0685b7
 
 #google credentials
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "Desktop/project2/HurricaneClimateChange-0569b60f4efb.json"
