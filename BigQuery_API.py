@@ -1,22 +1,35 @@
+#import necessary libraries
 from flask import Flask
 from flask_restful import Resource, Api, reqparse
 from google.cloud import bigquery
 
 import os
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "Desktop/Proj2-HurricaneClimateChange/HurricaneClimateChange-0569b60f4efb.json"
 
-app = Flask(__name__)
-api = Api(app)
+#google credentials
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "Desktop/project2/HurricaneClimateChange-0569b60f4efb.json"
+
+# #create Flass app instance
+# app = Flask(__name__)
+# api = Api(app)
 
 
-# simple non parameterized query
+#setup connection to BigAssQuery
 client = bigquery.Client()
+
+
+# @app.route("/")
+# def index():
 
 query = """
     SELECT year, latitude, longitude, avg(sea_surface_temp) as avgSST
     FROM `bigquery-public-data.noaa_icoads.icoads_core_*` 
+    WHERE year >=1851 
+    AND latitude <=50
+    AND latitude >=0
+    # AND longitude <=-50
+    # AND longitude >=-100
     GROUP BY year, latitude, longitude
-    ORDER BY year, latitude
+    ORDER BY year
     LIMIT 5
 """
 
@@ -57,11 +70,11 @@ query_res = client.query(query)  # Make an API request.
 #         return{'res': results}
 
 
-# # to print in the console
-# for row in query_res:
-#     print(f'{row.year}, {row.latitude}, {row.longitude}, {row.avgSST}')
+# to print in the console
+for row in query_res:
+    print(f'{row.year}, {row.latitude}, {row.longitude}, {row.avgSST}')
 
 # api.add_resource(PrintUserCount, '/')
 
-if __name__ == '__main__':
-    app.run(debug=True, port = 1123)
+# if __name__ == '__main__':
+#     app.run(debug=True, port = 1123)
