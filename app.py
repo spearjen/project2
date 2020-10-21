@@ -1,35 +1,34 @@
-# PULL IN DEPENDENCIES AND MAKE CONNECTION
-import sqlite3
-
-conn = sqlite3.connect('?????.db')
-
-from datetime import datetime
-
+#import necessary libraries
 from flask import Flask
+from flask import Flask, jsonify
+from flask_restful import Resource, Api, reqparse
+from google.cloud import bigquery
+from flask_cors import CORS
+import os
 
-from flask_sqlalchemy import SQLAlchemy
+# import otherroute! which is another py file
 
-# CREATE TABLE IF NEEDED
+# try:
+#     # The typical way to import flask-cors
+#     from flask.cor import cross_origin
+# except ImportError:
+#     # Path hack allows examples to be run without installation.
+#     import os
+#     parentdir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+#     os.sys.path.insert(0, parentdir)
 
-conn.execute("""CREATE TABLE IF NOT EXISTS air_sea_temps (
-                latitude FLOAT,
-                longitude FLOAT,
-                year INTEGER,
-                month INTEGER,
-                day INTEGER,
-                air_temperature FLOAT,    
-                sea_surface_temp FLOAT     
-                )""")
+#     from flask.cors import cross_origin
 
-# # ADD VALUES IF NEEDED
-# values = ('Deep Learning', 
-#           'Ian Goodfellow et al.', 
-#           775, 
-#           datetime(2016, 11, 18).timestamp())
 
-# #EXECUTE COMMAND
-# conn.execute("""INSERT INTO books VALUES (?, ?, ?, ?)""", values)
 
-#QUERY
-r = conn.execute("""SELECT * FROM ?????""")
-r.fetchall()
+#create Flask app instance
+app = Flask(__name__)
+cors=CORS(app, resources=r'smallSst.json', allow_headers='Content-Type')
+
+@app.route("/",methods=['GET'])
+# @cross_origin()
+def index():
+    return render_template("index.html")
+
+if __name__ == '__main__':
+    app.run(debug=True, port = 1123)
