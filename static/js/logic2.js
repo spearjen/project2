@@ -1,5 +1,5 @@
 // Store our API endpoint inside queryUrl
-var queryUrl = "https://raw.githubusercontent.com/spearjen/project2/main/sstGeoJSON.json#";
+var queryUrl = "https://raw.githubusercontent.com/spearjen/project2/main/sstGeoJSON.json";
 
 // Get JSON data
 d3.json(queryUrl, function(data) {
