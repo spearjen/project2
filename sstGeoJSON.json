@@ -47,10 +47,10 @@
       "type":"Feature",
       "properties":{
         "year":1851,
-        "sea_surface_temp_min":NaN,
-        "sea_surface_temp_max":NaN,
-        "sea_surface_temp_mean":NaN,
-        "sea_surface_temp_median":NaN
+        "sea_surface_temp_min":0,
+        "sea_surface_temp_max":0,
+        "sea_surface_temp_mean":0,
+        "sea_surface_temp_median":0
       },
       "geometry":{
         "type":"Polygon",
@@ -231,10 +231,10 @@
       "type":"Feature",
       "properties":{
         "year":1851,
-        "sea_surface_temp_min":NaN,
-        "sea_surface_temp_max":NaN,
-        "sea_surface_temp_mean":NaN,
-        "sea_surface_temp_median":NaN
+        "sea_surface_temp_min":0,
+        "sea_surface_temp_max":0,
+        "sea_surface_temp_mean":0,
+        "sea_surface_temp_median":0
       },
       "geometry":{
         "type":"Polygon",
@@ -253,10 +253,10 @@
       "type":"Feature",
       "properties":{
         "year":1851,
-        "sea_surface_temp_min":NaN,
-        "sea_surface_temp_max":NaN,
-        "sea_surface_temp_mean":NaN,
-        "sea_surface_temp_median":NaN
+        "sea_surface_temp_min":0,
+        "sea_surface_temp_max":0,
+        "sea_surface_temp_mean":0,
+        "sea_surface_temp_median":0
       },
       "geometry":{
         "type":"Polygon",
@@ -309,10 +309,10 @@
       "type":"Feature",
       "properties":{
         "year":1851,
-        "sea_surface_temp_min":NaN,
-        "sea_surface_temp_max":NaN,
-        "sea_surface_temp_mean":NaN,
-        "sea_surface_temp_median":NaN
+        "sea_surface_temp_min":0,
+        "sea_surface_temp_max":0,
+        "sea_surface_temp_mean":0,
+        "sea_surface_temp_median":0
       },
       "geometry":{
         "type":"Polygon",
@@ -331,10 +331,10 @@
       "type":"Feature",
       "properties":{
         "year":1851,
-        "sea_surface_temp_min":NaN,
-        "sea_surface_temp_max":NaN,
-        "sea_surface_temp_mean":NaN,
-        "sea_surface_temp_median":NaN
+        "sea_surface_temp_min":0,
+        "sea_surface_temp_max":0,
+        "sea_surface_temp_mean":0,
+        "sea_surface_temp_median":0
       },
       "geometry":{
         "type":"Polygon",
