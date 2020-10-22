@@ -5,7 +5,7 @@ var overLayMap = {
     Hurricanes: hurricanes
 }
 // url set to the repo with the 
-var url = JSON.stringify('https://github.com/spearjen/project2/blob/main/Resources/hurricane.js');
+var url = 'https://raw.githubusercontent.com/spearjen/project2/main/Resources/hurricane.json'
 
 d3.json(url,function(data){
     console.log(data);
