@@ -9,15 +9,15 @@ var url = 'https://raw.githubusercontent.com/spearjen/project2/main/Resources/la
 
 d3.json(url, function(data){
     // switch function for color of circle according too magnitude of quake
-    function circleColor(wind){
+    function circleColor(Wind_mph){
         switch (true) {
-            case wind < 95:
+            case Wind_mph < 95:
                 return "green";
-            case wind <111:
+            case Wind_mph <111:
                 return "lightgreen";
-            case wind <130:
+            case Wind_mph <130:
                 return "yellow";
-            case wind <157:
+            case Wind_mph <157:
                 return "orange";
             default:
                 return "red";
@@ -30,14 +30,14 @@ d3.json(url, function(data){
         style: function(feature) {
             return{
                 color: "black",
-                fillColor: circleColor(feature.properties.wind_mph),
+                fillColor: circleColor(feature.properties.Wind_mph),
                 fillOpacity: 0.65,
                 weight: 0.5,
-                radius: (feature.properties.wind_mph) /5
+                radius: (feature.properties.Wind_mph) /5
             };
         },
         onEachFeature: function(feature, layer){
-            layer.bindPopup(`<strong>Status:</strong> ${feature.properties.Status}<br><strong>Name:</strong> ${feature.properties.Name}<br><strong>Wind Speed:</strong> ${feature.properties.wind_mph}`);
+            layer.bindPopup(`<strong>Status:</strong> ${feature.properties.Status}<br><strong>Name:</strong> ${feature.properties.Name}<br><strong>Wind Speed:</strong> ${feature.properties.Wind_mph}`);
         }
     }).addTo(hurricanes);
     hurricanes.addTo(myMap);
