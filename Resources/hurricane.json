@@ -1,4 +1,4 @@
-var dataset = {
+{
   "type": "FeatureCollection",
   "features": [
     {
@@ -16147,27 +16147,6 @@ var dataset = {
         "coordinates": [
           -81.4,
           30.4
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "ID": "AL242005",
-        "Name": "VINCE",
-        "Year": 2005,
-        "Month": 10,
-        "Day": 11,
-        "Status": " TD",
-        "Wind_mph": 30,
-        "Latitude": 37.2,
-        "Longitude": NaN
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          NaN,
-          37.2
         ]
       }
     },

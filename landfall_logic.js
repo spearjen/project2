@@ -5,9 +5,10 @@ var overLayMap = {
     Hurricanes: hurricanes
 }
 // url set to the repo with the 
-var url = 'https://raw.githubusercontent.com/spearjen/project2/main/Resources/landfall.js'
+var url = JSON.stringify('https://github.com/spearjen/project2/blob/main/Resources/hurricane.js');
 
-d3.json(url, function(data){
+d3.json(url,function(data){
+    console.log(data);
     // switch function for color of circle according too magnitude of quake
     function circleColor(Wind_mph){
         switch (true) {
