@@ -1,36 +1,11 @@
 // Store our API endpoint inside queryUrl
-var queryUrl = "https://raw.githubusercontent.com/spearjen/project2/main/Resources/smallSst.json";
+var queryUrl = "https://raw.githubusercontent.com/spearjen/project2/main/sstGeoJSON.js";
 
 // Get JSON data
 d3.json(queryUrl, function(sstData) {
   console.log(sstData);
-    // Once we get a response, send the data.features object to the createFeatures function
-    // createFeatures(sstData.features);
-    i=0;
-    // define data
-    // var year = sstData.data[i][0];
-    var latRangeLeft = sstData.data[i][1].left;
-    var latRangeRight = sstData.data[i][1].right;
-    var latMid = sstData.data[i][1].mid;
-    var longRangeLeft = sstData.data[i][2].left;
-    var longRangeRight = sstData.data[i][2].right;
-    var longMid = sstData.data[i][2].mid;
-    var sstMin = sstData.data[i][3]
-    var sstMax = sstData.data[i][4];
-    var sstMean = sstData.data[i][5];
-    var sstMedian = sstData.data[i][6];
-    
-    // console.log(year);
-    console.log(latRangeLeft);
-    console.log(latRangeRight);
-    console.log(latMid);
-    console.log(longRangeLeft);
-    console.log(longRangeRight);
-    console.log(longMid);
-    console.log(sstMin);
-    console.log(sstMax);
-    console.log(sstMean);
-    console.log(sstMedian);
+  // Once we get a response, send the data.features object to the createFeatures function
+  // createFeatures(sstData.features);
 
   function getColor(d) {
     return d > 5 ? '#E31A1C' :
