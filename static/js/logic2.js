@@ -1,9 +1,9 @@
 // Store our API endpoint inside queryUrl
-var queryUrl = "../../sstGeoJSON.json";
+var queryUrl = "https://raw.githubusercontent.com/spearjen/project2/main/sstGeoJSON.json#";
 
 // Get JSON data
-d3.json(queryUrl, function(response) {
-  console.log(response.features);
+d3.json(queryUrl, function(data) {
+  console.log(data.features);
 });
 //   // Once we get a response, send the data.features object to the createFeatures function
 //   // createFeatures(sstData.features);
